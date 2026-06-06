@@ -25,4 +25,4 @@ Installed Services:
 - FTP
 
 Administrative User:
-labadmin
+serveradmin
