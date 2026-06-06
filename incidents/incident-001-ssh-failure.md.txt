@@ -1,0 +1,28 @@
+# Incident 001
+
+Date:
+May 18 2026
+
+Issue:
+Unable to connect remotely via SSH.
+
+Symptoms:
+Connection timed out.
+
+Investigation:
+- Verified server power state
+- Tested network connectivity
+- Checked firewall rules
+- Reviewed SSH daemon status
+
+Root Cause:
+SSH service was stopped.
+
+Resolution:
+Restarted and enabled ssh.service.
+
+Verification:
+Successful remote login confirmed.
+
+Lessons Learned:
+Monitoring should verify SSH service status.

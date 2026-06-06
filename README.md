@@ -23,11 +23,11 @@ Host:
 
 Virtualization:
 
-- Oracle VirtualBox
+- Oracle VirtualBox (via Vagrant)
 
 Guest OS:
 
-- Ubuntu Server 24.04 LTS
+- Ubuntu Server 20.04 LTS
 
 Services:
 
@@ -59,20 +59,3 @@ Tools:
 - Log Analysis
 - Root Cause Analysis
 - Technical Documentation
-
-## Server Information
-
-OS:
-Ubuntu Server 24.04
-
-IP Address:
-192.168.1.100
-
-Installed Services:
-
-- SSH
-- Apache
-- FTP
-
-Administrative User:
-labadmin
