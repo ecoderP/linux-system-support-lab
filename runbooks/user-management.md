@@ -358,21 +358,45 @@ sudo chage -E -1 username
 
 ---
 
-# 7. SSH Access Management
+## 7. SSH Access Management
 
-## Create SSH Directory
+### Create SSH Directory
 
-```bash
+```
 mkdir -p ~/.ssh
 chmod 700 ~/.ssh
 ```
 
 ---
 
-## Add Public Key
+### Generate Public SSH Key on Local Machine
 
-```bash
-nano ~/.ssh/authorized_keys
+First confirm if local key exists (.pub file)
+
+```
+ls -la ~/.ssh
+```
+
+Generate key:
+
+```
+ssh-keygen -t ed25519
+```
+
+Manually copy key from local machine to server:
+
+```
+cat <directory>/.ssh/id_ed25519.pub
+```
+
+---
+
+### Add Public Key to Ubuntu Server Authorized_keys
+
+Copy public key from local machine and manually paste inside ~/.ssh/authorized_keys:
+
+```
+vim ~/.ssh/authorized_keys
 ```
 
 Set permissions:
@@ -394,6 +418,11 @@ Correct ownership:
 ```bash
 sudo chown -R username:username ~/.ssh
 ```
+
+<figure>
+  <img src="../screenshots/ssh-permission-fixed.png" alt="SSh remote access permission fixed.">
+  <figcaption>Figure 1: SSH remote server access permission fixed.</figcaption>
+</figure>
 
 ---
 
